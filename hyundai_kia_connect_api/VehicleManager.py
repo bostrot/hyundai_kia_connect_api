@@ -17,7 +17,7 @@ from .const import (
     REGIONS,
     VEHICLE_LOCK_ACTION,
 )
-from .HyundaiBlueLinkAPIUSA import HyundaiBlueLinkAPIUSA
+# from .HyundaiBlueLinkAPIUSA import HyundaiBlueLinkAPIUSA
 from .KiaUvoApiCA import KiaUvoApiCA
 from .KiaUvoApiEU import KiaUvoApiEU
 from .KiaUvoAPIUSA import KiaUvoAPIUSA
@@ -123,7 +123,7 @@ class VehicleManager:
             return KiaUvoApiCA(region, brand)
         elif REGIONS[region] == REGION_EUROPE:
             return KiaUvoApiEU(region, brand)
-        elif REGIONS[region] == REGION_USA and BRANDS[brand] == BRAND_HYUNDAI:
-            return HyundaiBlueLinkAPIUSA(region, brand)
+        # elif REGIONS[region] == REGION_USA and BRANDS[brand] == BRAND_HYUNDAI:
+        #     return HyundaiBlueLinkAPIUSA(region, brand)
         elif REGIONS[region] == REGION_USA and BRANDS[brand] == BRAND_KIA:
             return KiaUvoAPIUSA(region, brand)
